@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import "@/styles/page-loader.css";
-import logo from "@/public/logo/logo.png"; // ✅ correct import for Next.js
 
 const LogoLoader: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -29,7 +28,7 @@ const LogoLoader: React.FC = () => {
       <div className="logo-wrapper">
         {/* ✅ Use next/image for optimization */}
         <Image
-          src={logo}
+          src="/logo/logo.png"
           alt="Loading..."
           width={120}
           height={120}
