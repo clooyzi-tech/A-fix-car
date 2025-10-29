@@ -2,60 +2,61 @@ import type React from "react";
 import "@/app/globals.css";
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
+import LayoutClientWrapper from "@/components/LayoutClientWrapper";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title:
-    "Clooyzi Web Solutions | Website Design & Development in Moodbidri, Mangalore (DK)",
+    "A-Fix Car Maintenance | 24x7 Car Repair & Towing Service in Nasim, Riyadh",
   description:
-    "Clooyzi Web Solutions builds responsive, SEO-optimized websites for businesses in Moodbidri, Mangalore, Dakshina Kannada (DK). We specialize in custom web design, development, and digital branding to help your business grow online.",
+    "A-Fix Car Maintenance provides professional car repair, painting, electrical works, and 24x7 emergency towing service in Nasim, Riyadh. Reliable auto care for all brands.",
   keywords: [
-    "Clooyzi",
-    "web development Moodbidri",
-    "website design Mangalore",
-    "business website DK",
-    "SEO optimization Moodbidri",
-    "web development Dakshina Kannada",
-    "digital marketing Mangalore",
-    "web solutions Moodbidri",
-    "web service for businesses DK",
-    "custom website design Mangalore",
+    "A-Fix Car Maintenance",
+    "car mechanic Riyadh",
+    "auto repair Nasim",
+    "24x7 car towing Riyadh",
+    "car service center Riyadh",
+    "car denting and painting Nasim",
+    "electrical car works Riyadh",
+    "emergency roadside assistance Riyadh",
+    "car maintenance in Nasim Riyadh",
+    "A-Fix auto service Riyadh",
   ],
   alternates: {
-    canonical: "https://clooyzi.com",
+    canonical: "https://afixcars.com",
   },
   openGraph: {
     title:
-      "Clooyzi Web Solutions | Web Design & Development in Moodbidri, Mangalore (DK)",
+      "A-Fix Car Maintenance | 24x7 Auto Repair & Towing in Nasim, Riyadh",
     description:
-      "Professional web design and development services based in Moodbidri, Mangalore, Dakshina Kannada. Clooyzi helps businesses grow with creative and secure digital solutions.",
-    url: "https://clooyzi.com",
-    siteName: "Clooyzi Web Solutions",
+      "Professional car repair, electrical works, denting, painting, and emergency towing services in Nasim, Riyadh. Trusted auto experts available 24/7.",
+    url: "https://afixcars.com",
+    siteName: "A-Fix Car Maintenance",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Clooyzi Web Solutions - Moodbidri Mangalore DK",
+        alt: "A-Fix Car Maintenance Workshop in Nasim Riyadh",
       },
     ],
-    locale: "en_US",
+    locale: "en_SA",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    site: "@clooyzi",
+    site: "@afixcars",
     title:
-      "Clooyzi Web Solutions | Website Design & Development in Moodbidri, Mangalore (DK)",
+      "A-Fix Car Maintenance | Expert Car Service & Towing in Nasim, Riyadh",
     description:
-      "Build your business website with Clooyzi Web Solutions — creative, professional, and secure web development in Moodbidri, Mangalore, Dakshina Kannada.",
+      "Your trusted car service partner in Nasim, Riyadh — from general maintenance to emergency towing, A-Fix keeps your car running smoothly 24x7.",
     images: ["/og-image.jpg"],
   },
   icons: {
-    icon: "/logo.ico", // main favicon
-    shortcut: "/logo.ico", // shortcut icon
-    apple: "/logo.ico", // Apple touch icon
+    icon: "/logo.ico",
+    shortcut: "/logo.ico",
+    apple: "/logo.ico",
   },
 };
 
@@ -67,15 +68,8 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="light"
-          enableSystem
-          disableTransitionOnChange
-        >
-          {children}
-        </ThemeProvider>
+        <LayoutClientWrapper>{children}</LayoutClientWrapper>
       </body>
-    </html>
+      </html>
   );
 }

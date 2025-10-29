@@ -1,8 +1,8 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import "@/styles/page-loader-software.css";
-import logo from "@/public/logo/clooyzi-software-logo.png"; // ✅ correct import for Next.js
+import "@/styles/page-loader.css";
+import logo from "@/public/logo/logo.png"; // ✅ correct import for Next.js
 
 const LogoLoader: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);

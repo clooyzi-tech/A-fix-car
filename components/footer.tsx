@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { SiX, SiInstagram, SiFacebook, SiWhatsapp, SiYoutube } from "react-icons/si";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -13,7 +14,7 @@ export default function Footer() {
           
           {/* --- Company --- */}
           <div>
-            <h3 className="text-lg font-semibold text-white mb-4">Company</h3>
+            <h3 className="text-lg font-semibold text-red-500 mb-4">Company</h3>
             <ul className="space-y-2 text-sm">
               <li><Link href="/about" className="hover:text-white transition-colors">About Us</Link></li>
               <li><Link href="/careers" className="hover:text-white transition-colors">Careers</Link></li>
@@ -24,7 +25,7 @@ export default function Footer() {
 
           {/* --- Customer Care --- */}
           <div>
-            <h3 className="text-lg font-semibold text-white mb-4">Customer Care</h3>
+            <h3 className="text-lg font-semibold text-red-500 mb-4">Customer Care</h3>
             <ul className="space-y-2 text-sm">
               <li><Link href="/help" className="hover:text-white transition-colors">Help Center</Link></li>
               <li><Link href="/support" className="hover:text-white transition-colors">Support</Link></li>
@@ -35,7 +36,7 @@ export default function Footer() {
 
           {/* --- Policies --- */}
           <div>
-            <h3 className="text-lg font-semibold text-white mb-4">Policies</h3>
+            <h3 className="text-lg font-semibold text-red-500 mb-4">Policies</h3>
             <ul className="space-y-2 text-sm">
               <li><Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link></li>
               <li><Link href="/terms" className="hover:text-white transition-colors">Terms & Conditions</Link></li>
@@ -50,45 +51,67 @@ export default function Footer() {
             <div className="flex gap-5 mt-3">
               
               {/* X */}
-              <Link href="https://x.com/clooyzi" className="text-white hover:text-gray-400 transition-colors">
+              <Link href="https://x.com/clooyzi" className="text-red-500 hover:text-red-text-red-900 transition-colors">
                 <span className="sr-only">X</span>
                 <SiX className="h-6 w-6" />
               </Link>
 
               {/* Instagram */}
-              <Link href="https://www.instagram.com/clooyzi_/" className="text-white hover:text-gray-400 transition-colors">
+              <Link href="https://www.instagram.com/clooyzi_/" className="text-red-500 hover:text-red-text-red-900 transition-colors">
                 <span className="sr-only">Instagram</span>
                 <SiInstagram className="h-6 w-6" />
               </Link>
 
               {/* Facebook */}
-              <Link href="https://www.facebook.com/clooyzi" className="text-white hover:text-gray-400 transition-colors">
+              <Link href="https://www.facebook.com/clooyzi" className="text-red-500 hover:text-red-text-red-900 transition-colors">
                 <span className="sr-only">Facebook</span>
                 <SiFacebook className="h-6 w-6" />
               </Link>
 
               {/* WhatsApp */}
-              <Link href="https://wa.me/9353472169" className="text-white hover:text-gray-400 transition-colors">
+              <Link href="https://wa.me/966555941897"className="text-red-500 hover:text-red-text-red-900 transition-colors">
                 <span className="sr-only">WhatsApp</span>
                 <SiWhatsapp className="h-6 w-6" />
               </Link>
 
               {/* YouTube */}
-              <Link href="https://www.youtube.com/@clooyzi" className="text-white hover:text-gray-400 transition-colors">
+              <Link href="https://www.youtube.com/@clooyzi" className="text-red-500 hover:text-red-text-red-900 transition-colors">
                 <span className="sr-only">YouTube</span>
                 <SiYoutube className="h-6 w-6" />
               </Link>
             </div>
           </div>
         </div>
+{/* === Bottom Section (Centered Clooyzi Credit) === */}
+<div className="border-t border-gray-700 pt-6 flex flex-col items-center justify-center text-center space-y-3">
+  <Link
+    href="/"
+    className="text-2xl font-bold text-white hover:text-gray-400 transition-all"
+  >
+                <Image
+                  src="/logo/logo.png" // ✅ Make sure your logo is in /public/logo.png
+                  alt="A-Mix AutoCare Logo"
+                  width={13}
+                  height={50}
+                  className="object-contain h-10 md:h-12 w-auto hover:scale-105 transition-transform duration-300 rounded-full"
+                  priority
+                />
+  </Link>
+  <p className="text-sm text-gray-400">
+    © 2025 A-Mix. All rights reserved.
+  </p>
+  <p className="text-sm text-gray-400">
+    Developed by{" "}
+    <Link
+      href="https://clooyzi.com"
+      target="_blank"
+      className="text-red-500 hover:text-red-400 font-semibold"
+    >
+      Clooyzi.com
+    </Link>
+  </p>
+</div>
 
-        {/* === Bottom Section === */}
-        <div className="border-t border-gray-700 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
-          <Link href="/" className="text-xl font-bold text-white hover:text-gray-400 transition-all">
-            Clooyzi
-          </Link>
-          <p className="text-sm text-gray-400">© 2025 Clooyzi. All rights reserved.</p>
-        </div>
 
       </div>
     </footer>

@@ -5,9 +5,9 @@
 @import 'swiper/css/navigation';
 @import 'swiper/css/pagination';
 
-
-
-/* Base body font and background */
+/* ----------------------------- */
+/* 🌍 Base Body & Color Variables */
+/* ----------------------------- */
 body {
   @apply bg-background text-foreground;
   font-size: 14px; /* smaller base font */
@@ -21,19 +21,19 @@ body {
     --card-foreground: 222.2 84% 4.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
-    --primary: 221.2 83.2% 53.3%;
+    --primary: 0 100% 60%; /* red */
     --primary-foreground: 210 40% 98%;
-    --secondary: 210 40% 96.1%;
+    --secondary: 0 0% 96%;
     --secondary-foreground: 222.2 47.4% 11.2%;
-    --muted: 210 40% 96.1%;
+    --muted: 0 0% 96%;
     --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 210 40% 96.1%;
+    --accent: 0 0% 96%;
     --accent-foreground: 222.2 47.4% 11.2%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 221.2 83.2% 53.3%;
+    --ring: 0 100% 60%;
     --radius: 0.5rem;
   }
 
@@ -85,6 +85,9 @@ html {
   }
 }
 
+/* ------------------- */
+/* 🔴 Animated Red Orbs */
+/* ------------------- */
 @layer utilities {
   @keyframes orb-move-1 {
     0% { transform: translate(-10%, -10%) scale(1); }
@@ -109,10 +112,11 @@ html {
     filter: blur(90px);
   }
 
+  /* 🔴 Red Themed Orbs */
   .orb1 {
     width: 400px;
     height: 400px;
-    background: radial-gradient(circle, #a78bfa, transparent);
+    background: radial-gradient(circle, #ff4d4c, transparent);
     top: -10%;
     left: -10%;
     animation: orb-move-1 18s ease-in-out infinite;
@@ -121,7 +125,7 @@ html {
   .orb2 {
     width: 350px;
     height: 350px;
-    background: radial-gradient(circle, #7dd3fc, transparent);
+    background: radial-gradient(circle, #ff706d, transparent);
     bottom: -15%;
     right: -10%;
     animation: orb-move-2 22s ease-in-out infinite;
@@ -130,84 +134,80 @@ html {
   .orb3 {
     width: 300px;
     height: 300px;
-    background: radial-gradient(circle, #f472b6, transparent);
+    background: radial-gradient(circle, #ff9b8a, transparent);
     top: 30%;
     right: 20%;
     animation: orb-move-3 25s ease-in-out infinite;
   }
 }
 
-
-
-
-
-
-/*-BUTTON GET STARTED software page - CENTERED NEUMORPHISM  nav button nav button nav button*/ 
+/* --------------------------------------------------------- */
+/* 🧭 BUTTON GET STARTED / NAV - RED NEUMORPHISM STYLE */
+/* --------------------------------------------------------- */
 @layer utilities {
   .shadow-neumorphism-softwarepage {
-    background-color: #313131; /* ensure white background */
-    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.1),
-                -1px -1px  6px rgba(221, 0, 255, 0.9);
-                
-    transition: box-shadow 0.9s ease, transform 0.9s ease, background-color 0.9s ease;
+    background-color: #ffffff; /* white background */
+    color: #ff4d4c;
+    box-shadow:
+      4px 4px 15px rgba(0, 0, 0, 0.15),
+      -1px -1px 6px rgba(255, 77, 76, 0.6);
+    transition:
+      box-shadow 0.9s ease,
+      transform 0.9s ease,
+      background-color 0.9s ease,
+      color 0.4s ease;
   }
+
   .shadow-neumorphism-hover-softwarepage {
-    background-color: #a200ff; /* keep white on hover */
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15),
-                -2px -2px 6px rgba(187, 186, 186, 0.85);
-    color: #eae8e8;
+    background-color: #ff4d4c; /* red hover */
+    color: #ffffff;
+    box-shadow:
+      2px 2px 10px rgba(0, 0, 0, 0.15),
+      -2px -2px 6px rgba(255, 140, 140, 0.75);
     transform: scale(1.05);
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* 💎 CLOOZYI NEUMORPHIC BUTTON DESIGN */
+/* ----------------------------------------------- */
+/* 💎 CLOOYZI RED NEUMORPHIC BUTTON DESIGN (Global) */
+/* ----------------------------------------------- */
 @layer utilities {
   .button-shadow-clooyzi {
-    background-color: #313131; /* dark gray base */
-    color: #ffffff;
+    background-color: #ffffff; /* white base */
+    color: #ff4d4c; /* red text */
     font-weight: 600;
     letter-spacing: 0.6px;
     padding: 0.75rem 1.8rem;
-    border-radius: 12px; /* subtle rounded corners for neumorphism */
-    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.1),
-                -1px -1px  6px rgba(221, 0, 255, 0.9); /* light top-left & dark bottom-right */
-    display: inline-block; /* ensures no flex needed */
+    border-radius: 12px;
+    border: 1px solid rgba(255, 77, 76, 0.4);
+    box-shadow:
+      4px 4px 15px rgba(0, 0, 0, 0.1),
+      -1px -1px 6px rgba(255, 77, 76, 0.8);
+    display: inline-block;
     text-align: center;
     cursor: pointer;
-    transition: 
-      box-shadow 0.4s ease, 
-      transform 0.3s ease, 
-      background-color 0.4s ease, 
+    transition:
+      box-shadow 0.4s ease,
+      transform 0.3s ease,
+      background-color 0.4s ease,
       color 0.3s ease;
   }
 
   /* Hover Animation */
   .button-shadow-clooyzi-hover:hover {
-    background-color: #7503b8; /* vibrant purple on hover */
-    box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.15),
-                -2px -2px 6px rgba(255, 255, 255, 0.25);
-    color: #eae8e8;
+    background-color: #ff4d4c;
+    color: #ffffff;
+    box-shadow:
+      2px 2px 10px rgba(255, 77, 76, 0.4),
+      -2px -2px 6px rgba(255, 120, 120, 0.3);
     transform: scale(1.05);
   }
 
   /* Click / Active Animation */
   .button-shadow-clooyzi-active:active {
     transform: scale(0.95);
-    box-shadow: inset 2px 2px 8px rgba(0, 0, 0, 0.2),
-                inset -2px -2px 8px rgba(221, 0, 255, 0.2);
+    box-shadow:
+      inset 2px 2px 8px rgba(0, 0, 0, 0.2),
+      inset -2px -2px 8px rgba(255, 77, 76, 0.3);
   }
 }
